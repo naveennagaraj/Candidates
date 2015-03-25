@@ -8,6 +8,7 @@
    * @description
    *
    */
+
   angular
     .module('branch', [
       'ui.router'
@@ -18,6 +19,7 @@
     .config(config);
 
   function config($stateProvider) {
+
     $stateProvider
       .state('branch', {
         url: 'branch/',

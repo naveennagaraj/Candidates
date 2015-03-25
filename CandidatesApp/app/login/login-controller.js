@@ -1,35 +1,27 @@
 (function() {
     'use strict';
 
-    /**
-     * @ngdoc object
-     * @name login.controller:LoginCtrl
-     *
-     * @description
-     *
-     */
     angular
         .module('login')
-        .controller('LoginCtrl', LoginCtrl);
+        .controller('LoginCtrl',LoginCtrl);
 
-    function LoginCtrl($scope, $location) {
-        console.log("hi");
+    /* @ngInject */
+    function LoginCtrl($scope,$state) {
+       
         var vm = this;
         activate();
+
         function activate() {
-            console.log("hi");
+            console.log(1);
         }
         $scope.loginAuthunticate = function() {
-            console.log("hi");
+            //console.log("hi");
             if ($scope.uname === 'naveen' && $scope.upass === 'naveen') {
                 console.log("hi");
-                $location.path("home");
-            }
-            else
-            {
+                $state.go('branch');
+            } else {
                 alert("Error");
             }
         };
     }
-
 })();

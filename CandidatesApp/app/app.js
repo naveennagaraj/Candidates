@@ -13,10 +13,8 @@
       'ngAria',
       'ui.router',
       'mgcrea.ngStrap',
-      'home',
       'login',
-      'branch',
-      'header'
+      'branch'
     ]);
 
   angular
@@ -24,7 +22,7 @@
     .config(config);
 
   function config($urlRouterProvider) {
-    $urlRouterProvider.otherwise('/header');
+    $urlRouterProvider.otherwise('/login');
   }
 
 })();

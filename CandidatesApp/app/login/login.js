@@ -19,11 +19,15 @@
 
   function config($stateProvider) {
     $stateProvider
-      .state('home.login', {
+      .state('login', {
         url: '/login',
-        views:{'@':{templateUrl: 'login/login.tpl.html'}},
-        controller: 'LoginCtrl',
-        controllerAs: 'login'
+        views:{
+          '@':{
+            templateUrl: 'login/login.tpl.html',
+            controller: 'LoginCtrl'
+          }
+        }
+        
       });
   }
 

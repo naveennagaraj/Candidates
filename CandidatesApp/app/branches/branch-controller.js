@@ -19,7 +19,7 @@
     $scope.Graduation=[];
     $scope.PostGraduation=[];
     function grad(name,course){this.name=name,this.course=course};
-    function pGrad(name,course){this.name=name,this.course=course};
+    // function pGrad(name,course){this.name=name,this.course=course};
     activate();
     function activate () {
     }
@@ -34,7 +34,7 @@
     vm.AddPostGraduation=AddPostGraduation;
     function AddPostGraduation(degName,degCourse){
       // console.log(degName,degCourse)
-      $scope.PostGraduation.push(new pGrad(degName,degCourse));
+      $scope.PostGraduation.push(new grad(degName,degCourse));
       console.log($scope.PostGraduation);
     }
   }
