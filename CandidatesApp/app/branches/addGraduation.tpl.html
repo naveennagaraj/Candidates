@@ -1,0 +1,12 @@
+<div class="row">
+	<div class="col-md-3"></div>
+	<div class="col-md-5">
+		<div class="row">
+		<h1>Add Graduation</h1>
+			Degree Name:*<input type="text" class="form-control" ng-model="degName"><br>
+			Select Combination:<select class="form-control" ng-model="degCourse"  ng-options="l as l for l in list" multiple></select><br>
+			<button class="btn btn-success" ng-click="vm.AddGraduation(degName,degCourse)">Save</button>
+		</div>
+	</div>
+	<div class="col-md-4"></div>
+</div>
