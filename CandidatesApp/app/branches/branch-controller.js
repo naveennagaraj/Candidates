@@ -14,11 +14,12 @@
 
   function BranchCtrl($scope) {
 
-    $scope.list = ['Computer Science','Computer Application', 'Information Technology', 'Mechanical', 'Electronics', 'Electrical and Electronics', 'Mathematics', 'Statistics'];
+    
     var vm = this;
-    $scope.Graduation=[];
-    $scope.PostGraduation=[];
-    function grad(name,course){this.name=name,this.course=course};
+    vm.list = ['Computer Science','Computer Application', 'Information Technology', 'Mechanical', 'Electronics', 'Electrical and Electronics', 'Mathematics', 'Statistics'];
+    vm.Graduation=[];
+    vm.PostGraduation=[];
+    // function grad(name,course){this.name=name,this.course=course};
     // function pGrad(name,course){this.name=name,this.course=course};
     activate();
     function activate () {
@@ -27,15 +28,16 @@
     vm.AddGraduation=AddGraduation;
     function AddGraduation(degName,degCourse){
       // console.log(degName,degCourse)
-      $scope.Graduation.push(new grad(degName,degCourse));
-      console.log($scope.Graduation);
+      vm.Graduation.push({'Degree' : degName,'Course' : degCourse});
+      console.log(vm.Graduation[0]);
     }
 
     vm.AddPostGraduation=AddPostGraduation;
     function AddPostGraduation(degName,degCourse){
       // console.log(degName,degCourse)
-      $scope.PostGraduation.push(new grad(degName,degCourse));
-      console.log($scope.PostGraduation);
+      vm.PostGraduation.push({'PDegree' : degName,'PCourse' : degCourse});
+      console.log(vm.PostGraduation);
+
     }
   }
 

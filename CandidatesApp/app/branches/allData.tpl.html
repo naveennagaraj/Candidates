@@ -1,15 +1,15 @@
 <div class="row" style="border:1px solid">
     <div class="col-sm-6">
-        <ul ng-repeat="g1 in Graduation">
-            <h4>{{g1.name}} in</h4>
-            <h5 ng-repeat="gc1 in g1.course">{{gc1}}</h5>
+        <ul ng-repeat="g1 in vm.Graduation">
+            <h4>{{g1.Degree}} in</h4>
+            <h5 ng-repeat="gc1 in g1.Course">{{gc1}}</h5>
             <BR>
         </ul>
     </div>
     <div class="col-sm-6">
-        <ul ng-repeat="g2 in PostGraduation">
-            <h4>{{g2.name}} in</h4>
-            <h5>{{g2.course}}</h5>
+        <ul ng-repeat="g2 in vm.PostGraduation">
+            <h4>{{g2.PDegree}} in</h4>
+            <h5>{{g2.PCourse}}</h5>
             <BR>
         </ul>
     </div>

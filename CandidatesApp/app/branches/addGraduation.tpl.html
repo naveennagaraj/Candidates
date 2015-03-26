@@ -4,7 +4,7 @@
 		<div class="row">
 		<h1>Add Graduation</h1>
 			Degree Name:*<input type="text" class="form-control" ng-model="degName"><br>
-			Select Combination:<select class="form-control" ng-model="degCourse"  ng-options="l as l for l in list" multiple></select><br>
+			Select Combination:<select class="form-control" ng-model="degCourse"  ng-options="l as l for l in vm.list" multiple></select><br>
 			<button class="btn btn-success" ng-click="vm.AddGraduation(degName,degCourse)">Save</button>
 		</div>
 	</div>
