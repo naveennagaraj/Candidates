@@ -1,0 +1,73 @@
+<div ng-controller="loginCtrl as vm" class='navbar navbar-inverse' role='navigation' data-bs-navbar data-bs-collapse data-start-collapsed='true'>
+    <div class='container'>
+        <div class='navbar-header'>
+            <button class='navbar-toggle collapsed' type='button' data-bs-collapse-toggle>
+                <span class='sr-only'>Toggle Navigation</span>
+                <span class='icon-bar'></span>
+                <span class='icon-bar'></span>
+                <span class='icon-bar'></span>
+            </button>
+            <a class='navbar-brand' href='#'>University of ABC</a>
+        </div>
+        <div class='navbar-collapse collapse' data-bs-collapse-target>
+            <ul class="nav navbar-nav">
+                <li>
+                    <a ui-sref="ROOT.home" href="#"><i class="glyphicon glyphicon-home"></i> Home</a>
+                </li>
+                <li ng-show="login">
+                    <a ui-sref="ROOT.candidate" href="#" role="button"><i class="glyphicon glyphicon-plus"></i> Candidate</a>
+                </li>
+                <li ng-show="login">
+                    <a ui-sref="ROOT.course" href="#" role="button"><i class="glyphicon glyphicon-plus"></i> Course</a>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav pull-right">
+                <li ng-show="login" class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-user"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">{{uname}}</a></li>
+                        <li><a href="#">Settings</a></li>
+                        <li><a href="#">Change Password</a></li>
+                        <li><a ng-click="vm.logout()" href="#">Logout</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- <div ng-controller="loginCtrl" class="navbar navbar-inverse navbar-static-top">
+    <div class="navbar-header">
+        <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a class='navbar-brand' href='#'>University of ABC</a>
+    </div>
+    <nav class="collapse navbar-collapse" role="navigation">
+        <ul class="nav navbar-nav">
+            <li>
+                <a ui-sref="ROOT.home" href="#"><i class="glyphicon glyphicon-home"></i> Home</a>
+            </li>
+            <li ng-show="login">
+                <a ui-sref="ROOT.candidate" href="#" role="button"><i class="glyphicon glyphicon-plus"></i> Candidate</a>
+            </li>
+            <li ng-show="login">
+                <a ui-sref="ROOT.course" href="#" role="button"><i class="glyphicon glyphicon-plus"></i> Course</a>
+            </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <li ng-show="login" class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-user"></i></a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">{{uname}}</a></li>
+                    <li><a href="#">Settings</a></li>
+                    <li><a href="#">Change Password</a></li>
+                    <li><a ng-click="logout()" href="#">Logout</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+</div> -->

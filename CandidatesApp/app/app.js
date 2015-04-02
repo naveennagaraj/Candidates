@@ -2,27 +2,36 @@
   'use strict';
 
   /* @ngdoc object
-   * @name candidatesApp
+   * @name myNewApp
    * @requires $urlRouterProvider
    *
    * @description
    *
    */
   angular
-    .module('candidatesApp', [
+    .module('myNewApp', [
       'ngAria',
       'ui.router',
       'mgcrea.ngStrap',
+      'home',
       'login',
-      'branch'
-    ]);
-
-  angular
-    .module('candidatesApp')
+      'candidate',
+      'register',
+      'course'
+    ])
     .config(config);
 
-  function config($urlRouterProvider) {
-    $urlRouterProvider.otherwise('/login');
+  function config($urlRouterProvider, $stateProvider) {
+    $urlRouterProvider.otherwise('/ROOT/login');
+    $stateProvider
+    .state('ROOT', {
+      url: '/ROOT',
+      views: {
+        'header@': {
+          templateUrl: 'Header/header.tpl.html'
+        }
+      }
+    });
   }
 
 })();

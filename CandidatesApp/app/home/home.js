@@ -19,13 +19,9 @@
 
   function config($stateProvider) {
     $stateProvider
-      .state('home', {
+      .state('ROOT.home', {
         url: '/home',
-        views:{
-          '@':{
-            templateUrl: 'home/home.tpl.html'
-          }
-        },
+        templateUrl: 'home/home.tpl.html',
         controller: 'HomeCtrl',
         controllerAs: 'home'
       });

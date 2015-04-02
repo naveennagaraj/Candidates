@@ -1,0 +1,66 @@
+<div class="row">
+    <h1>New Candidate</h1>
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+        <form class="form" ng-submit="vm.addCandidates(name,Address,dob,degree,branch)" novalidate>
+            <table class="table">
+                <tr>
+                    <td>
+                        <label class="control-label" for="name">Name</label>
+                    </td>
+                    <td>
+                        <input type="text" ng-model="name" class="form-control" placeholder="Name" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label class="control-label" for="Address" >Address</label>
+                    </td>
+                    <td>
+                        <textarea ng-model="Address" class="form-control" placeholder="Address"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label class="control-label" for="dob">Date Of Birth</label>
+                    </td>
+                    <td>
+                        <input type="date" ng-model="dob" class="form-control" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label class="control-label" for="degree">Degree</label>
+                    </td>
+                    <td>
+                        <select class="form-control" ng-model='degree' ng-options='l as l for l in vm.lst' ng-change='vm.updateBranch(degree)'>
+                        <option value="?">Select Degree</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label class="control-label" for="branch">Branch</label>
+                    </td>
+                    <td>
+                        <select ng-model="branch" class="form-control" ng-options='l as l for l in vm.updatelst'>
+                            <option value="?">Select Branch</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button class="btn btn-danger pull-right">Cancel</button>
+                    </td>
+                    <td>
+                        <input type="submit" class="btn btn-success">
+                    </td>
+                </tr>
+            </table>
+            <div data-ng-show="error" class="text-danger">
+                <strong data-ng-bind="error"></strong>
+            </div>
+        </form>
+    </div>
+    <div class="col-md-2"></div>
+</div>

@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html lang='en' data-ng-app='candidatesApp'>
-  <head>
-    <title>CandidatesApp</title>
+<html lang='en' ng-app='myNewApp'>
+
+<head>
+    <title>Candidate</title>
     <meta name='viewport' content='width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes'>
     <!-- inject:head:js -->
     <!-- endinject -->
@@ -11,37 +12,38 @@
     <!-- endbower -->
     <!-- inject:css -->
     <!-- endinject -->
-  </head>
-  <body>
-  
-  <div class='navbar navbar-inverse' role='navigation' data-bs-navbar data-bs-collapse data-start-collapsed='true'>
-    <div class='container'>
-        <div class='navbar-header'>
-            <button class='navbar-toggle collapsed' type='button' data-bs-collapse-toggle>
-                <span class='sr-only'>Toggle Navigation</span>
-                <span class='icon-bar'></span>
-                <span class='icon-bar'></span>
-                <span class='icon-bar'></span>
-            </button>
-            <a class='navbar-brand' href='#/'>University of ABC</a>
-        </div>
-        <div class='navbar-collapse collapse' data-bs-collapse-target>
-            <ul class='nav navbar-nav'>
-                <li data-ui-sref-active='active'>
-                    <a data-ui-sref='branch'>Branches</a>
-                </li>
-            </ul>
-        </div>
-    </div>
-</div>
-<div class='container'>
-    <div data-ui-view>
-    </div>
-</div>
+</head>
 
+<body>
+    <div class="wrapper">
+        <div class="box">
+            <div class="row row-offcanvas row-offcanvas-left">
+                <!-- main right col -->
+                <div class="column col-sm-12 col-xs-12" id="main">
+                    <!-- top nav -->
+                    <div ui-view="header">
+                    </div>
+                    <!-- /top nav -->
+                    <div class="padding">
+                        <div class="full col-sm-12">
+                             <div class="well" ui-view>
+                                <!-- content -->
+                            </div> 
+                        </div>
+                        <hr>
+                    </div>
+                    <!-- /col-9 -->
+                </div>
+                <!-- /padding -->   
+            </div>
+            <!-- /main -->
+        </div>
+    </div>
+    </div>
     <!-- bower:js -->
     <!-- endbower -->
     <!-- inject:js -->
     <!-- endinject -->
-  </body>
+</body>
+
 </html>
