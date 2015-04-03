@@ -16,9 +16,9 @@
     function coursedata() {
         return {
             csdata: 
-                ['BioInformatics','Cyber Science','Computer Science','Computer Application', 'Information Technology', 'Mechanical Engineer' , 'Electronics Engineer'],
-            brdata: ['B.Sc','BCA','B.E','M.Sc','M.C.A','M.E'],
-            cmpcourse: []   
+                [{'id':'c1','value':'Information Technology'},{'id':'c2','value':'Mechanical Engineer'},{'id':'c3','value':'Electronics Engineer'},{'id':'c4','value':'Computer Application'},{'id':'c5','value':'Computer Science'},{'id':'c6','value':'Cyber Science'},{'id':'c7','value':'BioInformatics'}],
+            brdata: [{'id':'b1','value':'B.Sc'},{'id':'b2','value':'M.E'},{'id':'b3','value':'M.C.A'},{'id':'b4','value':'BCA'},{'id':'b5','value':'B.E'},{'id':'b6','value':'M.Sc'}],
+            cmpcourse: [{'DegreeId':'b1','Branches':['c1','c2','c3']}]   
         };
     }
 })();

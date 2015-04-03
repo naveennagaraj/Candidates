@@ -33,8 +33,8 @@
                         <label class="control-label" for="degree">Degree</label>
                     </td>
                     <td>
-                        <select class="form-control" ng-model='degree' ng-options='l as l for l in vm.lst' ng-change='vm.updateBranch(degree)'>
-                        <option value="?">Select Degree</option>
+                        <select class="form-control" ng-model='degree' ng-options='l.value  for l in vm.lst track by l.id' ng-change='vm.updateBranch(degree)'>
+                        <options value="?">Select Degree</options>
                         </select>
                     </td>
                 </tr>

@@ -12,11 +12,11 @@
     .module('register', [
       'ui.router'
     ])
-    .config(config)
-    .controller(registerCtrl,['',function (){
-      var vm=this;
+    .config(config);
+    // .controller(registerCtrl,['',function (){
+    //   var vm=this;
       
-    }]);
+    // }]);
   function config($stateProvider) {
     $stateProvider
     .state('ROOT.register', {
