@@ -13,7 +13,7 @@
       'ui.router','course'
     ])
     .config(config)
-    .controller('candidateCtrl', ['$scope','coursedata', function ($scope,coursedata) {
+    .controller('candidateCtrl', ['coursedata', function (coursedata) {
       var vm=this;
       vm.lst=coursedata.brdata;
       vm.lst0=coursedata.csdata;
