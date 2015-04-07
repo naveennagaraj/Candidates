@@ -25,6 +25,15 @@ describe('courseCtrl', function() {
       expect(service).toBeTruthy();
     });
 
+    it('testing AddCourse function',function(){
+        var service= createService();
+        var degName=service.brdata[0];
+        var degCourse=service.brdata[0];
+        ctrl.AddCourse(degName,degCourse);
+        expect(service.cmpcourse.length).toEqual(1);
+    });
+    
+
     // it('initial length of Gradustion befor pushing AddGraduation', function() {
     //     // expect(ctrl.AddGraduation).toBeUndefined();
     //     // ctrl.AddGraduation();

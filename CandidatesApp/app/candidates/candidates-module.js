@@ -15,50 +15,44 @@
     .config(config)
     .controller('candidateCtrl', ['coursedata', function (coursedata) {
       var vm=this;
+      vm.updatelst=[];
       vm.lst=coursedata.brdata;
       vm.lst0=coursedata.csdata;
       vm.lst1=coursedata.cmpcourse;
+      // console.log(vm.lst1);
       vm.getBranchNameFromId = getBranchNameFromId;
       vm.updateBranch=updateBranch;
-      // console.log(vm.lst1);
+      
       vm.updatelst=[];
 
-      function getBranchNameFromId(branchId) {
+      function getBranchNameFromId(branchId) 
+      {
+        // 
         for(var i=0;i<vm.lst0.length;i++)
         {
+          // console.log(vm.lst0[i]);
           if (vm.lst0[i].id == branchId) 
-                  {
-                    // console.log(vm.lst0[i].id,vm.lst0[i].value)
-                    return vm.lst0[i].value;
-                  }
+          {
+            return vm.lst0[i].value;
+          }
         }
-            // angular.forEach(vm.lst0, function (value, index) {
-            //     console.log(value.id,branchId)
-            //     if (value.id == branchId) 
-            //       {
-            //         console.log(value.id,value.value)
-            //         return value.value;
-            //       }
-            // });
-        }
+      }
 
       function updateBranch(abc)
       {
         vm.updatelst=[];
-        angular.forEach(vm.lst1,function(value,index){
-          // console.log(value,index,abc);
+        angular.forEach(vm.lst1,function(value,index)
+        { 
+          // console.log(value); 
           if(abc.id==value.DegreeId)
           {
-            angular.forEach(value.Branches,function(val, ind){
-              // console.log(val);
+            angular.forEach(value.Branches,function(val, ind)
+            {  
               vm.updatelst.push(vm.getBranchNameFromId(val));
-              // vm.updatelst[0]=vm.getBranchNameFromId(val);
-              // console.log(vm.getBranchNameFromId(val));
-              // console.log(vm.getBranchNameFromId(val))
             });
           }
         });
-        console.log(vm.updatelst);
+        
       }
 
       
